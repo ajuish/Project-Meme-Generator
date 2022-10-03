@@ -1,3 +1,36 @@
+html {
+    background-color: rgb(32, 218, 162);
+    background-size: cover;
+}
+
+h1 {
+    font-size: 5em;
+    text-align:center;
+    color: white;
+}
+
+.meme-list {
+    text-align: center;
+    font-size: large;
+    margin-left: 60px;
+}
+
+#meme-image {
+    width:400px;
+    height:auto;
+    margin-left: 150px;
+    margin-right: auto;
+}
+
+#meme-desc {
+    text-align: center;
+}
+
+#meme-form {
+    text-align: center;
+}
+
 .container {
-    display: flex
+    display: flex;
+    text-align : center;
 }
