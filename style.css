@@ -12,6 +12,13 @@ h1 {
     color: rgb(118, 97, 170);
 }
 
+h2{
+    color: red;
+}
+
+h3{
+    color: red;
+}
 .meme-list {
     text-align: center;
     font-size: large;
