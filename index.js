@@ -18,6 +18,7 @@ function fetchMemes(){
         addMemes(memeData)
     })
     .catch((error)=> console.log(error.message))
+    addMemeText()
 }
 
 function addMemes(memeData){
@@ -37,9 +38,11 @@ function showMeme(meme){
     memeTitle.textContent = meme.name;
 }
 
+function addMemeText(){
+    const memeForm = document.getElementById("meme-form");
 memeForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const memeDesc = document.getElementById('meme-desc');
     memeDesc.textContent = document.getElementById('meme-text').value;
     memeForm.reset();
-})
+})}
