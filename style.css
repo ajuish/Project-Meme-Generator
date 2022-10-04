@@ -1,18 +1,22 @@
 html {
-    background-color: rgb(32, 218, 162);
+    background-color: rgb(13, 42, 82);
     background-size: cover;
+    font-family: "Georgia", serif;
 }
 
 h1 {
-    font-size: 5em;
+    font-size: 4em;
     text-align:center;
-    color: white;
+    height: 100px;
+    margin-block-start: 1em;
+    color: rgb(118, 97, 170);
 }
 
 .meme-list {
     text-align: center;
     font-size: large;
     margin-left: 60px;
+    color:rgb(209, 199, 234)
 }
 
 #meme-image {
@@ -24,10 +28,14 @@ h1 {
 
 #meme-desc {
     text-align: center;
+    margin-right: auto;
+    margin-left: 420px;
 }
 
 #meme-form {
     text-align: center;
+    margin-right: auto;
+    margin-left: 420px;
 }
 
 .container {
