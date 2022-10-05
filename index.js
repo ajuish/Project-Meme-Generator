@@ -2,7 +2,7 @@ fetchMemes()
 
 //create reference constants
 const memeList = document.getElementById('meme-list');
-const memeImg = document.querySelector('#meme-image');
+const memeImg = document.getElementById('meme-image');
 const memeDesc = document.getElementById('meme-desc');
 const memeTitle = document.getElementById('meme-name');
 const likeCount = document.getElementById('like-count');
