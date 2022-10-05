@@ -17,6 +17,7 @@ function fetchMemes(){
     .then(apidata => {
         memeData = apidata.data.memes.slice(1,11);
         addMemes(memeData)
+        showMeme(memeData[0])
     })
     .catch((error)=> console.log(error.message))
     addMemeText() 
