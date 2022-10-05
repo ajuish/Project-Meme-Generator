@@ -48,6 +48,13 @@ h3{
     margin-left: auto;
 }
 
+#forms {
+    display:flex;
+}
+
+#Likes{
+    color:greenyellow;
+}
 .container {
     display: flex;
     text-align : center;
