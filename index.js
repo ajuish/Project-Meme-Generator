@@ -18,7 +18,8 @@ function fetchMemes(){
         addMemes(memeData)
     })
     .catch((error)=> console.log(error.message))
-    addMemeText()  
+    addMemeText() 
+    addLikes(); 
 }
 
 function addMemes(memeData){
@@ -48,3 +49,11 @@ function addMemeText(){
     memeDesc.textContent = document.getElementById('meme-text').value;
     memeForm.reset();
 })}
+
+function addLikes(){ 
+  let likeCount = document.getElementById('like-count')
+  document.addEventListener('keydown', (event) => {
+    if(event.key === "ArrowRight"){
+    likeCount.textContent++
+}
+  })}
