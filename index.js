@@ -18,7 +18,7 @@ function fetchMemes(){
         addMemes(memeData)
     })
     .catch((error)=> console.log(error.message))
-    addMemeText()   
+    addMemeText()  
 }
 
 function addMemes(memeData){
