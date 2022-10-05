@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", fetchMemes)
 
 //create empty meme data array
 let memeData = []
-
+let currentMeme;
 //fetch meme data from public API
 function fetchMemes(){
     fetch("https://api.imgflip.com/get_memes")
@@ -19,7 +19,6 @@ function fetchMemes(){
     })
     .catch((error)=> console.log(error.message))
     addMemeText() 
-    addLikes(); 
 }
 
 function addMemes(memeData){
@@ -33,9 +32,18 @@ function addMemes(memeData){
 }
 
 function showMeme(meme){
+    currentMeme = meme
     const memeImg = document.getElementById("meme-image");
     const memeTitle = document.getElementById('meme-name');
     const memeDesc = document.getElementById("meme-desc");
+    let memeLikes = document.getElementById('meme-likes')
+    likeCount = document.getElementById('like-count')
+ document.addEventListener('keydown', (event) => {
+    if(event.key === "ArrowRight"){
+meme.memeLikes = likeCount.textContent++
+    console.log(memeLikes)
+}
+  })
     memeImg.src = meme.url;
     memeTitle.textContent = meme.name;
     memeDesc.textContent = "";
@@ -50,10 +58,3 @@ function addMemeText(){
     memeForm.reset();
 })}
 
-function addLikes(){ 
-  let likeCount = document.getElementById('like-count')
-  document.addEventListener('keydown', (event) => {
-    if(event.key === "ArrowRight"){
-    likeCount.textContent++
-}
-  })}

@@ -42,6 +42,10 @@ h3{
     margin-left: auto;
 }
 
+#meme-likes {
+    color:red
+}
+
 #meme-form {
     text-align: center;
     margin-right: auto;
