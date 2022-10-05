@@ -9,17 +9,25 @@ document.addEventListener("DOMContentLoaded", fetchMemes)
 //create empty meme data array
 let memeData = []
 
+
 //fetch meme data from public API
 function fetchMemes(){
     fetch("https://api.imgflip.com/get_memes")
     .then(resp => resp.json())
-    .then(apidata => {
-        memeData = apidata.data.memes.slice(1,11);
+    .then(apiData => {
+        memeData = apiData.data.memes.slice(1,11);
         addMemes(memeData)
+        addDesc(memeData)
     })
     .catch((error)=> console.log(error.message))
     addMemeText()  
 }
+
+// Grace - Trying to make description persist by saving the desc array
+// function addDesc(memeData) {
+//     const memeDesc = document.getElementById("meme-desc");
+
+//}
 
 function addMemes(memeData){
     const memeList = document.getElementById("meme-list");
@@ -28,6 +36,16 @@ function addMemes(memeData){
         memeName.textContent = meme.name;
         memeName.addEventListener("click", ()=>showMeme(meme))
         memeList.append(memeName)
+
+        // Grace - Trying to make description persist by saving the desc array
+        const memeDesc = document.getElementById("meme-desc");
+        const newDesc = document.getElementById('meme-text').value;
+        const addedDesc = newDesc.textContent
+        memeDesc.textContent = addedDesc
+        // meme.Desc = newDesc.value
+        //  
+        // newDesc.textContent = added.Desc
+        //
     })
 }
 
