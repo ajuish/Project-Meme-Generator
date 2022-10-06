@@ -115,3 +115,7 @@ input[type=submit] {
     font-family: "copperplate";
     margin-block-start: 1em;
 }
+
+.hidden {
+    display:none
+}

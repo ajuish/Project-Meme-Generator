@@ -7,6 +7,7 @@ const memeDesc = document.getElementById('meme-desc');
 const memeTitle = document.getElementById('meme-name');
 const likeCount = document.getElementById('like-count');
 const memeForm = document.getElementById('meme-form');
+const likes = document.getElementById("Likes")
 
 //create empty meme data array
 let memeData = []
@@ -46,6 +47,8 @@ function showMeme(meme){
     memeImg.src = meme.url;
     memeTitle.textContent = meme.name;
     memeDesc.textContent = meme.desc;
+    likes.className = "";
+    memeForm.className = "";
 } 
 
 //add desc to memes
@@ -63,10 +66,7 @@ function addLikes(){
     if(event.key === "ArrowRight"){
         currentMeme.likes = Number(currentMeme.likes) + 1;
         likeCount.textContent = currentMeme.likes;
-    // } else if(event.key === "ArrowLeft"){
-    //     currentMeme.likes = Number(currentMeme.likes) - 1;
-    //     likeCount.textContent = currentMeme.likes;
-    //     likeCount.setAttribute('min', 0);
     }
-  })}
+  })
+}
 
