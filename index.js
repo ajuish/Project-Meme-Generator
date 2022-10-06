@@ -58,7 +58,7 @@ function addMemeText(){
 })}
 
 //add likes to meme
-function addLikes()
+function addLikes(){
   document.addEventListener('keydown', (event) => {
     if(event.key === "ArrowRight"){
         currentMeme.likes = Number(currentMeme.likes) + 1;
@@ -68,5 +68,5 @@ function addLikes()
     //     likeCount.textContent = currentMeme.likes;
     //     likeCount.setAttribute('min', 0);
     }
-  })
-}
+  })}
+
