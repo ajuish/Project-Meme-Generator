@@ -1,7 +1,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="./style.css"/>
-        <script src="./index.js"></script>
+        <script defer src="./index.js"></script>
     </head>
     <body>
         <header>
@@ -14,7 +14,7 @@
                 <!--add meme list here!-->
             </nav>
 
-            <section class="meme-details">
+            <section class="meme-details" id="meme-details">
                 <h3 id="meme-name">Meme Title</h3>
                 <img id="meme-image" src="https://i.imgflip.com/30b1gx.jpg">
                     <!-- format? -->
@@ -22,12 +22,12 @@
                 <!--Meme input value-->
                 <div id="forms">
                     <form id="meme-form">
-                        <input id="meme-text" type="text" placeholder="Enter Meme Text">
-                        <input type="submit" value="Add Meme Text"/>
+                        <input id="meme-text" type="text" placeholder="Enter Description">
+                        <input type="submit" value="Add Description"/>
                     </form>
-                    <div id="Likes">
-                        <span>Likes:</span>
-                        <span id="like-count">0</span>
+                    <div id="Likes" min="0">
+                        <span>Likes :</span>
+                        <span type="number" min="0" id="like-count">0</span>
                     </div>
                 </div>
             </section>
