@@ -19,7 +19,7 @@ function fetchMemes(){
     .then(apidata => {
         memeData = apidata.data.memes.slice(2,16);
         addMemes(memeData);
-        showMeme(memeData[0]);
+        // showMeme(memeData[0]);
         addMemeText();
         addLikes();
     })
