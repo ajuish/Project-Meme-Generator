@@ -5,7 +5,7 @@ html {
     background-size: cover;
     background-color: rgb(10, 32, 63); 
     background-size: cover;
-    font-family: "Georgia" ;
+    font-family: "Georgia", serif;
     font-size:larger
 /* "Georgia", serif; */
 }
@@ -18,19 +18,19 @@ h1 {
     border-bottom-style: solid, black;
     margin-block-start: 1em;
     color: rgb(167, 159, 188);
-    background-color:rgb(59, 59, 61);
+    background-color:rgb(0,0,0,.75);
     border-radius: 5px;
     /* width: 50% */
 }
 
 h2{
     font-size: 2em;
-    color: rgb(63, 113, 184);
+    color: rgb(127, 173, 241);
 }
 
 h3{
     font-size: 2em;
-    color: rgb(63, 113, 184);
+    color: rgb(127, 173, 241);
 }
 .meme-list {
     text-align: left;
@@ -40,8 +40,8 @@ h3{
 }
 
 
-#meme-list:hover {
-    color: #ab7e02;
+#meme-list h5:hover {
+    color: #ab0210;
 }
 
 .meme-details {
