@@ -7,15 +7,15 @@ const memeDesc = document.getElementById('meme-desc');
 const memeTitle = document.getElementById('meme-name');
 const likeCount = document.getElementById('like-count');
 const memeForm = document.getElementById('meme-form');
-const likes = document.getElementById("Likes")
+const likes = document.getElementById("like-box");
 
 //create empty meme data array
-let memeData = []
-let currentMeme
+let memeData = [];
+let currentMeme;
 
 //fetch meme data from public API
 function fetchMemes(){
-    fetch("https://api.imgflip.com/get_memes")
+    fetch('https://api.imgflip.com/get_memes')
     .then(resp => resp.json())
     .then(apidata => {
         memeData = apidata.data.memes.slice(2,16);
@@ -33,10 +33,10 @@ function addMemes(memeData){
         meme.desc = "";
         meme.likes = 0;
         //add memes to list
-        const memeName = document.createElement("h5");
+        const memeName = document.createElement('h5');
         memeName.textContent = meme.name;
-        memeName.addEventListener("click", ()=>showMeme(meme))
-        memeList.append(memeName)
+        memeName.addEventListener('click', ()=>showMeme(meme));
+        memeList.append(memeName);
     })
 }
 
@@ -47,8 +47,8 @@ function showMeme(meme){
     memeImg.src = meme.url;
     memeTitle.textContent = meme.name;
     memeDesc.textContent = meme.desc;
-    likes.className = "";
-    memeForm.className = "";
+    likes.className = '';
+    memeForm.className = '';
 } 
 
 //add desc to memes
@@ -63,7 +63,7 @@ function addMemeText(){
 //add likes to meme
 function addLikes(){
   document.addEventListener('keydown', (event) => {
-    if(event.key === "ArrowRight"){
+    if(event.key === 'ArrowRight'){
         currentMeme.likes = Number(currentMeme.likes) + 1;
         likeCount.textContent = currentMeme.likes;
     }

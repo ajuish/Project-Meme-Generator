@@ -23,14 +23,13 @@ h1 {
     /* width: 50% */
 }
 
-h2{
+h3{
     font-size: 2em;
     color: rgb(127, 173, 241);
 }
 
-h3{
-    font-size: 2em;
-    color: rgb(127, 173, 241);
+h4{
+    color:rgb(176, 6, 29);
 }
 .meme-list {
     text-align: left;
@@ -41,7 +40,7 @@ h3{
 
 
 #meme-list h5:hover {
-    color: #ab0210;
+    color: rgb(177, 32, 51);
 }
 
 .meme-details {
@@ -70,8 +69,11 @@ h3{
     display:flex;
 }
 
+#like-box {
+    margin:auto
+}
 #Likes{
-    color:rgb(122, 46, 56);
+    color:rgb(177, 32, 51);
     border: 0;
     width:25%;
     height:20%;
