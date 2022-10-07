@@ -70,7 +70,14 @@ h4{
 }
 
 #like-box {
-    margin:auto
+    margin:auto;
+    color:rgb(177, 32, 51);
+    border: 0;
+    width:25%;
+    height:20%;
+    padding: 10px;
+    border-radius: 5px;
+    background: rgb(192, 124, 153);
 }
 #Likes{
     color:rgb(177, 32, 51);
