@@ -18,7 +18,7 @@ function fetchMemes(){
     fetch('https://api.imgflip.com/get_memes')
     .then(resp => resp.json())
     .then(apidata => {
-        memeData = apidata.data.memes.slice(2,16);
+        memeData = apidata.data.memes.slice(1,15);
         addMemes(memeData);
         // showMeme(memeData[0]);
         addMemeText();
